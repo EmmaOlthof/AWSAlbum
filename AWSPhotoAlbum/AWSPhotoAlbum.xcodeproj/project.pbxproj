@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2319DAD25B049A000B7E7E5 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2319DAC25B049A000B7E7E5 /* Backend.swift */; };
+		D2319DBD25B04A5200B7E7E5 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2319DBA25B04A5200B7E7E5 /* AmplifyModels.swift */; };
+		D2319DBE25B04A5200B7E7E5 /* Post+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2319DBB25B04A5200B7E7E5 /* Post+Schema.swift */; };
+		D2319DBF25B04A5200B7E7E5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2319DBC25B04A5200B7E7E5 /* Post.swift */; };
+		D2319DC325B04A6500B7E7E5 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D2319DC125B04A6500B7E7E5 /* amplifyconfiguration.json */; };
+		D2319DC425B04A6500B7E7E5 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D2319DC225B04A6500B7E7E5 /* awsconfiguration.json */; };
+		D2319DC725B04AFF00B7E7E5 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2319DC625B04AFF00B7E7E5 /* CameraView.swift */; };
 		D2AA3FE025B03EE7009863AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA3FDF25B03EE7009863AE /* AppDelegate.swift */; };
 		D2AA3FE225B03EE7009863AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA3FE125B03EE7009863AE /* SceneDelegate.swift */; };
-		D2AA3FE425B03EE7009863AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA3FE325B03EE7009863AE /* ViewController.swift */; };
 		D2AA3FE725B03EE7009863AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA3FE525B03EE7009863AE /* Main.storyboard */; };
 		D2AA3FE925B03EE7009863AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AA3FE825B03EE7009863AE /* Assets.xcassets */; };
 		D2AA3FEC25B03EE7009863AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AA3FEA25B03EE7009863AE /* LaunchScreen.storyboard */; };
@@ -19,10 +25,16 @@
 /* Begin PBXFileReference section */
 		3816C6C3351E5843678CF4EF /* Pods_AWSPhotoAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSPhotoAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66562E4CE169DEEBC1A2E609 /* Pods-AWSPhotoAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSPhotoAlbum.release.xcconfig"; path = "Target Support Files/Pods-AWSPhotoAlbum/Pods-AWSPhotoAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		D2319DAC25B049A000B7E7E5 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		D2319DBA25B04A5200B7E7E5 /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplifyModels.swift; sourceTree = "<group>"; };
+		D2319DBB25B04A5200B7E7E5 /* Post+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+Schema.swift"; sourceTree = "<group>"; };
+		D2319DBC25B04A5200B7E7E5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D2319DC125B04A6500B7E7E5 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		D2319DC225B04A6500B7E7E5 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		D2319DC625B04AFF00B7E7E5 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		D2AA3FDC25B03EE7009863AE /* AWSPhotoAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSPhotoAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA3FDF25B03EE7009863AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AA3FE125B03EE7009863AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2AA3FE325B03EE7009863AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2AA3FE625B03EE7009863AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2AA3FE825B03EE7009863AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AA3FEB25B03EE7009863AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +62,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D2319DB925B04A5200B7E7E5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D2319DBA25B04A5200B7E7E5 /* AmplifyModels.swift */,
+				D2319DBB25B04A5200B7E7E5 /* Post+Schema.swift */,
+				D2319DBC25B04A5200B7E7E5 /* Post.swift */,
+			);
+			name = models;
+			path = amplify/generated/models;
+			sourceTree = SOURCE_ROOT;
+		};
 		D2AA3FD325B03EE7009863AE = {
 			isa = PBXGroup;
 			children = (
@@ -71,9 +94,13 @@
 		D2AA3FDE25B03EE7009863AE /* AWSPhotoAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				D2319DC125B04A6500B7E7E5 /* amplifyconfiguration.json */,
+				D2319DC225B04A6500B7E7E5 /* awsconfiguration.json */,
+				D2319DB925B04A5200B7E7E5 /* models */,
 				D2AA3FDF25B03EE7009863AE /* AppDelegate.swift */,
 				D2AA3FE125B03EE7009863AE /* SceneDelegate.swift */,
-				D2AA3FE325B03EE7009863AE /* ViewController.swift */,
+				D2319DAC25B049A000B7E7E5 /* Backend.swift */,
+				D2319DC625B04AFF00B7E7E5 /* CameraView.swift */,
 				D2AA3FE525B03EE7009863AE /* Main.storyboard */,
 				D2AA3FE825B03EE7009863AE /* Assets.xcassets */,
 				D2AA3FEA25B03EE7009863AE /* LaunchScreen.storyboard */,
@@ -88,7 +115,6 @@
 				E44F91047AA7EDC226DE20F2 /* Pods-AWSPhotoAlbum.debug.xcconfig */,
 				66562E4CE169DEEBC1A2E609 /* Pods-AWSPhotoAlbum.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,9 +177,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2319DC425B04A6500B7E7E5 /* awsconfiguration.json in Resources */,
 				D2AA3FEC25B03EE7009863AE /* LaunchScreen.storyboard in Resources */,
 				D2AA3FE925B03EE7009863AE /* Assets.xcassets in Resources */,
 				D2AA3FE725B03EE7009863AE /* Main.storyboard in Resources */,
+				D2319DC325B04A6500B7E7E5 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,9 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2AA3FE425B03EE7009863AE /* ViewController.swift in Sources */,
+				D2319DBE25B04A5200B7E7E5 /* Post+Schema.swift in Sources */,
+				D2319DBD25B04A5200B7E7E5 /* AmplifyModels.swift in Sources */,
+				D2319DAD25B049A000B7E7E5 /* Backend.swift in Sources */,
 				D2AA3FE025B03EE7009863AE /* AppDelegate.swift in Sources */,
+				D2319DBF25B04A5200B7E7E5 /* Post.swift in Sources */,
 				D2AA3FE225B03EE7009863AE /* SceneDelegate.swift in Sources */,
+				D2319DC725B04AFF00B7E7E5 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
