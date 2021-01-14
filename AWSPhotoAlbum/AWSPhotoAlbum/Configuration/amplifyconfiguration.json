@@ -1,0 +1,73 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "awsphotoalbum": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://4n3mepxs25ewlkzfwpguifr32u.appsync-api.eu-central-1.amazonaws.com/graphql",
+                    "region": "eu-central-1",
+                    "authorizationType": "API_KEY",
+                    "apiKey": "da2-hrkz7y27x5fotdwpuzjojfssam"
+                }
+            }
+        }
+    },
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify/cli",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "eu-central-1:13421e5c-5941-477f-b3f3-0270419c02f5",
+                            "Region": "eu-central-1"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "eu-central-1_igxJRV7he",
+                        "AppClientId": "6prpak57evql42kk7fipsi39o3",
+                        "AppClientSecret": "c1ugr4vbekkmluijjd7snfmdns92jq7cfsf9hkl4fnk866vh5e8",
+                        "Region": "eu-central-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH"
+                    }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "awsphotoalbum36cb967a7bf84527b2eea34040a2ea40100147-dev",
+                        "Region": "eu-central-1"
+                    }
+                },
+                "AppSync": {
+                    "Default": {
+                        "ApiUrl": "https://4n3mepxs25ewlkzfwpguifr32u.appsync-api.eu-central-1.amazonaws.com/graphql",
+                        "Region": "eu-central-1",
+                        "AuthMode": "API_KEY",
+                        "ApiKey": "da2-hrkz7y27x5fotdwpuzjojfssam",
+                        "ClientDatabasePrefix": "awsphotoalbum_API_KEY"
+                    }
+                }
+            }
+        }
+    },
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "awsphotoalbum36cb967a7bf84527b2eea34040a2ea40100147-dev",
+                "region": "eu-central-1",
+                "defaultAccessLevel": "guest"
+            }
+        }
+    }
+}
