@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  AWSPhotoAlbum
 //
-//  Created by Rick Gijsberts on 14/01/2021.
+//  Created by Emma Olthof on 14/01/2021.
 //
 
 import UIKit

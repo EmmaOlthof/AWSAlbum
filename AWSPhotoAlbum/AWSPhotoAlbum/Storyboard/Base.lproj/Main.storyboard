@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hHI-y0-hlE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gallery View-->
+        <scene sceneID="2ow-pP-VdR">
+            <objects>
+                <viewController id="2nt-G5-SFL" customClass="GalleryView" customModule="AWSPhotoAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6f-mn-mO5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-xG-9Dl">
+                                <rect key="frame" x="8" y="52" width="398" height="761"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QyG-DJ-Q7R">
+                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="CD9-Z1-ieg" customClass="CollectionCell" customModule="AWSPhotoAlbum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DOT-Iw-YAR">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mb-bt-fDI">
+                                                    <rect key="frame" x="0.0" y="-2" width="125" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="awsImage" destination="6mb-bt-fDI" id="1pP-bA-Tw2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2nt-G5-SFL" id="BBf-zr-hDL"/>
+                                    <outlet property="delegate" destination="2nt-G5-SFL" id="fLB-Ay-KCC"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="prT-3h-nhY">
+                                <rect key="frame" x="184.5" y="518" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="hv1-tJ-EkL"/>
+                                    <constraint firstAttribute="height" constant="45" id="zd2-yp-LNo"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wqJ-I8-6w9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="prT-3h-nhY" firstAttribute="centerX" secondItem="N6f-mn-mO5" secondAttribute="centerX" id="2ML-Ao-eit"/>
+                            <constraint firstItem="HgM-xG-9Dl" firstAttribute="top" secondItem="wqJ-I8-6w9" secondAttribute="top" constant="8" id="TWS-Oo-0Tx"/>
+                            <constraint firstItem="HgM-xG-9Dl" firstAttribute="leading" secondItem="wqJ-I8-6w9" secondAttribute="leading" constant="8" id="UfD-tl-Tbk"/>
+                            <constraint firstItem="wqJ-I8-6w9" firstAttribute="trailing" secondItem="HgM-xG-9Dl" secondAttribute="trailing" constant="8" id="dM0-NV-fi9"/>
+                            <constraint firstItem="wqJ-I8-6w9" firstAttribute="bottom" secondItem="HgM-xG-9Dl" secondAttribute="bottom" id="pFc-HO-oZO"/>
+                            <constraint firstItem="wqJ-I8-6w9" firstAttribute="bottom" secondItem="prT-3h-nhY" secondAttribute="bottom" constant="250" id="xqA-uY-Ddv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="photo.fill.on.rectangle.fill" catalog="system" id="ar3-gu-1U6"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="prT-3h-nhY" id="7ht-Yq-s5d"/>
+                        <outlet property="photoCollection" destination="HgM-xG-9Dl" id="cww-ef-HKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GME-qF-mEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="459.375"/>
+        </scene>
+        <!--Camera View-->
+        <scene sceneID="xhp-tA-g2l">
+            <objects>
+                <viewController id="EBi-al-byt" customClass="CameraView" customModule="AWSPhotoAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eFg-fg-kkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="83j-aE-fHD">
+                                <rect key="frame" x="19.5" y="52" width="375" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="B5W-na-osj"/>
+                                    <constraint firstAttribute="width" constant="375" id="HZZ-zR-CdL"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-oE-DYZ">
+                                <rect key="frame" x="184.5" y="518" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="OAC-3n-Kb2"/>
+                                    <constraint firstAttribute="width" constant="45" id="cUR-ce-snk"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1xN-hV-kGb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="83j-aE-fHD" firstAttribute="top" secondItem="1xN-hV-kGb" secondAttribute="top" constant="8" id="fPa-h1-t2r"/>
+                            <constraint firstItem="83j-aE-fHD" firstAttribute="centerX" secondItem="eFg-fg-kkW" secondAttribute="centerX" id="jbb-A7-Vl7"/>
+                            <constraint firstItem="ZFT-oE-DYZ" firstAttribute="centerX" secondItem="eFg-fg-kkW" secondAttribute="centerX" id="kxN-27-PCl"/>
+                            <constraint firstItem="1xN-hV-kGb" firstAttribute="bottom" secondItem="ZFT-oE-DYZ" secondAttribute="bottom" constant="250" id="zq5-qb-56j"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="camera.fill" catalog="system" id="41L-N7-iin"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ZFT-oE-DYZ" id="8pF-f6-5LE"/>
+                        <outlet property="imageView" destination="83j-aE-fHD" id="Grb-5V-GDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUZ-a1-kwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="-147.32142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Htf-fL-eUx">
+            <objects>
+                <tabBarController id="hHI-y0-hlE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H4c-q9-owY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EBi-al-byt" kind="relationship" relationship="viewControllers" id="DwV-Os-beG"/>
+                        <segue destination="2nt-G5-SFL" kind="relationship" relationship="viewControllers" id="Yfe-up-FSq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrX-6f-0ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

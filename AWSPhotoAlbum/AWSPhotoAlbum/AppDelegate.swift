@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  AWSPhotoAlbum
 //
-//  Created by Rick Gijsberts on 14/01/2021.
+//  Created by Emma Olthof on 14/01/2021.
 //
 
 import UIKit
@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let _ = BackendConfig.initialize()
         return true
     }
 
