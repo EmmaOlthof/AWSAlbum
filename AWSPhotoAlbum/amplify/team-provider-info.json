@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsphotoalbum-dev-100147-authRole",
+      "UnauthRoleArn": "arn:aws:iam::219733562126:role/amplify-awsphotoalbum-dev-100147-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::219733562126:role/amplify-awsphotoalbum-dev-100147-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-awsphotoalbum-dev-100147-deployment",
+      "UnauthRoleName": "amplify-awsphotoalbum-dev-100147-unauthRole",
+      "StackName": "amplify-awsphotoalbum-dev-100147",
+      "StackId": "arn:aws:cloudformation:eu-central-1:219733562126:stack/amplify-awsphotoalbum-dev-100147/2499fb70-5647-11eb-bfeb-06c7af6bdb56",
+      "AmplifyAppId": "d3p9rbwpu49e0m"
+    },
+    "categories": {
+      "auth": {
+        "awsphotoalbum7d7bce11": {}
+      }
+    }
+  }
+}
