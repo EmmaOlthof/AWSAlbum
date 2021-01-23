@@ -45,6 +45,9 @@ class GalleryView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             case .success(let posts):
                 // download images
                 downloadImages(for: posts, completion: handleDownloadImages(succeed:))
+                
+                ////TESTING////************************************************************
+//                downloadImages(for: posts, completion: CameraView().handleDownloadImages(data:error:))
             case .failure(let error):
                 print(error)
                 DispatchQueue.main.async {
@@ -84,7 +87,37 @@ class GalleryView: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
         }
     }
-//    -------------------------------------------------------------------------------------
+    
+    ////TESTING////************************************************************
+//    func downloadImages(for posts: [Post], completion: @escaping ([Data], Error?) -> Void) {
+//        print("nr of posts: \(posts.count)")
+//        guard posts.count >= 1 else {
+//            return
+//        }
+//        for post in posts {
+//            _ = Amplify.Storage.downloadData(key: post.imageKey) { result in
+//                switch result {
+//                case .success(let imageData):
+//                    print("downloadImages() imageData: \(imageData.debugDescription)")
+//                    print("downloadImages() imageData: \(post.imageKey)")
+//                    completion([imageData], nil)
+////                    let image = UIImage(data: imageData)
+////                    DispatchQueue.main.async {
+////                        self.imageCache[post.imageKey] = image
+////                        self.photoCollection.reloadData()
+////                        self.activityIndicator.isHidden = true
+////                        self.activityIndicator.stopAnimating()
+////                    }
+//                case .failure(let error):
+//                    print("Failed to download image data: \(error)")
+//                    completion([],error)
+//                }
+//            }
+//        }
+//    }
+    ////TESTING////************************************************************
+    
+    //-------------------------------------------------------------------------------------
     func handleDownloadImages(succeed: Bool) {
         if succeed {
             DispatchQueue.main.async {
@@ -145,6 +178,9 @@ class GalleryView: UIViewController, UICollectionViewDelegate, UICollectionViewD
                     case "create":
                         print("Created: \(post)")
                         self.downloadImages(for: [post], completion: self.handleDownloadImages(succeed:))
+                        
+                        ////TESTING////************************************************************
+//                        self.downloadImages(for: [post], completion: CameraView().handleDownloadImages(data:error:))
                     case "update":
                         print("Updated: \(post)")
                     case "delete":

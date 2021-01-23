@@ -30,6 +30,20 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.viewWillAppear(animated)
     }
     
+    ////TESTING////************************************************************
+//    func handleDownloadImages(data: [Data], error: Error?) {
+//        if data.count > 0 {
+//            DispatchQueue.main.async {
+//                self.activityIndicator.stopAnimating()
+//                self.activityIndicator.isHidden = true
+//                self.messageAlert(firstLine: "No Photos Present", alertMessage: "There aren't any photos. You haven't saved your photos to the backend yet.")
+//            }
+//        } else {
+//            print("Could not download product images")
+//        }
+//    }
+    ////TESTING////************************************************************
+    
     // MARK: - Closure Amplify Configuration
     /****************************************************************************************************************************//**
     ** \brief      Function to handle the closure from function BackendConfig for handling the error when it occures and displays it to the user.
@@ -139,7 +153,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             }
         }
     }
-    
+//    []
     // MARK: - UIImagePickerControllerDelegate Methods
     /****************************************************************************************************************************//**
     ** \brief      Function to get the right image from imagePicker and set the imageView to it. If there is picked an image the imagePicker will dismiss and

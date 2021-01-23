@@ -1,0 +1,434 @@
+Last login: Thu Jan 14 09:23:24 on ttys000
+rickgijsberts@MacBook-Pro-van-Rick ~ % cd ~/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify init
+Scanning for plugins...
+Plugin scan successful
+Note: It is recommended to run this command from the root of your app directory
+? Enter a name for the project AWSPhotoAlbum
+? Enter a name for the environment dev
+? Choose your default editor: Emacs (via Terminal, Mac OS only)
+? Choose the type of app that you're building ios
+Using default provider  awscloudformation
+
+For more information on AWS Profiles, see:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
+? Do you want to use an AWS profile? Yes
+? Please choose the profile you want to use AdminProjectCSVR
+Adding backend environment dev to AWS Amplify Console app: d3p9rbwpu49e0m
+⠹ Initializing project in the cloud...
+
+CREATE_IN_PROGRESS DeploymentBucket                 AWS::S3::Bucket            Thu Jan 14 2021 10:01:57 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS AuthRole                         AWS::IAM::Role             Thu Jan 14 2021 10:01:56 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UnauthRole                       AWS::IAM::Role             Thu Jan 14 2021 10:01:56 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS DeploymentBucket                 AWS::S3::Bucket            Thu Jan 14 2021 10:01:56 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS AuthRole                         AWS::IAM::Role             Thu Jan 14 2021 10:01:55 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UnauthRole                       AWS::IAM::Role             Thu Jan 14 2021 10:01:55 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147 AWS::CloudFormation::Stack Thu Jan 14 2021 10:01:52 GMT+0100 (Midden-Europese standaardtijd) User Initiated             
+⠼ Initializing project in the cloud...
+
+CREATE_COMPLETE DeploymentBucket AWS::S3::Bucket Thu Jan 14 2021 10:02:17 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE AuthRole         AWS::IAM::Role  Thu Jan 14 2021 10:02:13 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE UnauthRole       AWS::IAM::Role  Thu Jan 14 2021 10:02:13 GMT+0100 (Midden-Europese standaardtijd) 
+⠼ Initializing project in the cloud...
+
+CREATE_COMPLETE amplify-awsphotoalbum-dev-100147 AWS::CloudFormation::Stack Thu Jan 14 2021 10:02:19 GMT+0100 (Midden-Europese standaardtijd) 
+✔ Successfully created initial AWS cloud resources for deployments.
+✔ Initialized provider successfully.
+Initialized your environment successfully.
+
+Your project has been successfully initialized and connected to the cloud!
+
+Some next steps:
+"amplify status" will show you what you've added already and if it's locally configured or deployed
+"amplify add <category>" will allow you to add features like user login or a backend API
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify console" to open the Amplify Console and view your project status
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+Pro tip:
+Try "amplify add api" to create a backend API and then "amplify publish" to deploy everything
+
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify add storage
+? Please select from one of the below mentioned services: Content (Images, audio, video, etc.)
+? You need to add auth (Amazon Cognito) to your project in order to add storage for user files. Do you want to add auth now? Yes
+Using service: Cognito, provided by: awscloudformation
+ 
+ The current configured provider is Amazon Cognito. 
+ 
+ Do you want to use the default authentication and security configuration? Default configuration
+ Warning: you will not be able to edit these selections. 
+ How do you want users to be able to sign in? Username
+ Do you want to configure advanced settings? No, I am done.
+Successfully added auth resource awsphotoalbum7d7bce11 locally
+
+Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+? Please provide a friendly name for your resource that will be used to label this category in the project: s37adf121c
+? Please provide bucket name: awsphotoalbum36cb967a7bf84527b2eea34040a2ea40
+? Who should have access: Auth and guest users
+? What kind of access do you want for Authenticated users? create/update, read, delete
+? What kind of access do you want for Guest users? create/update, read, delete
+? Do you want to add a Lambda Trigger for your S3 Bucket? No
+Auth configuration is required to allow unauthenticated users, but it is not configured properly.
+Successfully updated auth resource locally.
+Successfully added resource s37adf121c locally
+
+If a user is part of a user pool group, run "amplify update storage" to enable IAM group policies for CRUD operations
+Some next steps:
+"amplify push" builds all of your local backend resources and provisions them in the cloud
+"amplify publish" builds all of your local backend and front-end resources (if you added hosting category) and provisions them in the cloud
+
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify add api
+? Please select from one of the below mentioned services: GraphQL
+? Provide API name: awsphotoalbum
+? Choose the default authorization type for the API API key
+? Enter a description for the API key: 
+? After how many days from now the API key should expire (1-365): 7
+? Do you want to configure advanced settings for the GraphQL API No, I am done.
+? Do you have an annotated GraphQL schema? No
+? Choose a schema template: Single object with fields (e.g., “Todo” with ID, name, description)
+
+The following types do not have '@auth' enabled. Consider using @auth with @model
+	 - Todo
+Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+
+
+GraphQL schema compiled successfully.
+
+Edit your schema at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema.graphql or place .graphql files in a directory at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema
+? Do you want to edit the schema now? Yes
+Selected default editor not found in your machine. Please manually edit the file created at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema.graphql
+Successfully added resource awsphotoalbum locally
+
+Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify api update
+? Please select from one of the below mentioned services: GraphQL
+? Select from the options below Enable DataStore for entire API
+
+The following types do not have '@auth' enabled. Consider using @auth with @model
+	 - Post
+Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+
+
+GraphQL schema compiled successfully.
+
+Edit your schema at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema.graphql or place .graphql files in a directory at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema
+Successfully updated resource
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify codegen models
+
+The following types do not have '@auth' enabled. Consider using @auth with @model
+	 - Post
+Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+
+
+GraphQL schema compiled successfully.
+
+Edit your schema at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema.graphql or place .graphql files in a directory at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema
+Successfully generated models. Generated models can be found /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/generated/models
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % amplify push
+✔ Successfully pulled backend environment dev from the cloud.
+
+Current Environment: dev
+
+| Category | Resource name         | Operation | Provider plugin   |
+| -------- | --------------------- | --------- | ----------------- |
+| Auth     | awsphotoalbum7d7bce11 | Create    | awscloudformation |
+| Storage  | s37adf121c            | Create    | awscloudformation |
+| Api      | awsphotoalbum         | Create    | awscloudformation |
+? Are you sure you want to continue? Yes
+
+The following types do not have '@auth' enabled. Consider using @auth with @model
+	 - Post
+Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+
+
+GraphQL schema compiled successfully.
+
+Edit your schema at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema.graphql or place .graphql files in a directory at /Users/rickgijsberts/Documents/Emma/CreatingApps/AWS/AWSAlbum/AWSPhotoAlbum/amplify/backend/api/awsphotoalbum/schema
+? Do you want to generate code for your newly created GraphQL API Yes
+? Enter the file name pattern of graphql queries, mutations and subscriptions graphql/**/*.graphql
+? Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions Yes
+? Enter maximum statement depth [increase from default if your schema is deeply nested] 2
+? Enter the file name for the generated code API.swift
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS storages37adf121c                AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:54 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS apiawsphotoalbum                 AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:54 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+UPDATE_IN_PROGRESS UnauthRole                       AWS::IAM::Role             Thu Jan 14 2021 10:08:54 GMT+0100 (Midden-Europese standaardtijd)                            
+UPDATE_IN_PROGRESS DeploymentBucket                 AWS::S3::Bucket            Thu Jan 14 2021 10:08:53 GMT+0100 (Midden-Europese standaardtijd)                            
+UPDATE_IN_PROGRESS AuthRole                         AWS::IAM::Role             Thu Jan 14 2021 10:08:53 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS storages37adf121c                AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:53 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS apiawsphotoalbum                 AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:53 GMT+0100 (Midden-Europese standaardtijd)                            
+UPDATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147 AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:49 GMT+0100 (Midden-Europese standaardtijd) User Initiated             
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147-storages37adf121c-4NRY03H15G4N AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:54 GMT+0100 (Midden-Europese standaardtijd) User Initiated
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM AWS::CloudFormation::Stack Thu Jan 14 2021 10:08:54 GMT+0100 (Midden-Europese standaardtijd) User Initiated
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLAPI AWS::AppSync::GraphQLApi Thu Jan 14 2021 10:08:58 GMT+0100 (Midden-Europese standaardtijd) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLAPIKey AWS::AppSync::ApiKey        Thu Jan 14 2021 10:09:05 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS DataStore     AWS::DynamoDB::Table        Thu Jan 14 2021 10:09:05 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS DataStore     AWS::DynamoDB::Table        Thu Jan 14 2021 10:09:04 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS GraphQLSchema AWS::AppSync::GraphQLSchema Thu Jan 14 2021 10:09:04 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    GraphQLAPI    AWS::AppSync::GraphQLApi    Thu Jan 14 2021 10:09:02 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS GraphQLAPI    AWS::AppSync::GraphQLApi    Thu Jan 14 2021 10:09:02 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_COMPLETE AuthRole AWS::IAM::Role Thu Jan 14 2021 10:09:09 GMT+0100 (Midden-Europese standaardtijd) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS S3Bucket AWS::S3::Bucket Thu Jan 14 2021 10:09:10 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3Bucket AWS::S3::Bucket Thu Jan 14 2021 10:09:09 GMT+0100 (Midden-Europese standaardtijd)                            
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS Post          AWS::CloudFormation::Stack  Thu Jan 14 2021 10:09:10 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS Post          AWS::CloudFormation::Stack  Thu Jan 14 2021 10:09:09 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    GraphQLAPIKey AWS::AppSync::ApiKey        Thu Jan 14 2021 10:09:07 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS GraphQLAPIKey AWS::AppSync::ApiKey        Thu Jan 14 2021 10:09:07 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_COMPLETE    GraphQLSchema AWS::AppSync::GraphQLSchema Thu Jan 14 2021 10:09:07 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS GraphQLSchema AWS::AppSync::GraphQLSchema Thu Jan 14 2021 10:09:06 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM-Post-11P96ANNTLT1S AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:09 GMT+0100 (Midden-Europese standaardtijd) User Initiated
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS authawsphotoalbum7d7bce11      AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:14 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+UPDATE_COMPLETE    DeploymentBucket               AWS::S3::Bucket            Thu Jan 14 2021 10:09:13 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionRole AWS::IAM::Role             Thu Jan 14 2021 10:09:13 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS authawsphotoalbum7d7bce11      AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:13 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionRole AWS::IAM::Role             Thu Jan 14 2021 10:09:13 GMT+0100 (Midden-Europese standaardtijd)                            
+UPDATE_COMPLETE    UnauthRole                     AWS::IAM::Role             Thu Jan 14 2021 10:09:11 GMT+0100 (Midden-Europese standaardtijd)                            
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147-authawsphotoalbum7d7bce11-91YMMAYNPQB9 AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:14 GMT+0100 (Midden-Europese standaardtijd) User Initiated
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS PostIAMRole AWS::IAM::Role       Thu Jan 14 2021 10:09:16 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_IN_PROGRESS PostTable   AWS::DynamoDB::Table Thu Jan 14 2021 10:09:16 GMT+0100 (Midden-Europese standaardtijd) 
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS SNSRole AWS::IAM::Role Thu Jan 14 2021 10:09:20 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS SNSRole AWS::IAM::Role Thu Jan 14 2021 10:09:19 GMT+0100 (Midden-Europese standaardtijd)                            
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS PostIAMRole AWS::IAM::Role       Thu Jan 14 2021 10:09:17 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS PostTable   AWS::DynamoDB::Table Thu Jan 14 2021 10:09:16 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UpdateRolesWithIDPFunctionRole AWS::IAM::Role Thu Jan 14 2021 10:09:31 GMT+0100 (Midden-Europese standaardtijd) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS S3AuthReadPolicy      AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3AuthPrivatePolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3GuestReadPolicy     AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3GuestUploadPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3AuthUploadPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3AuthPublicPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3AuthProtectedPolicy AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3AuthReadPolicy      AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3AuthPrivatePolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3GuestReadPolicy     AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS S3GuestPublicPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    S3Bucket              AWS::S3::Bucket  Thu Jan 14 2021 10:09:31 GMT+0100 (Midden-Europese standaardtijd)                            
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE PostIAMRole AWS::IAM::Role Thu Jan 14 2021 10:09:34 GMT+0100 (Midden-Europese standaardtijd) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS S3GuestUploadPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3AuthPublicPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3AuthProtectedPolicy AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3AuthUploadPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS S3GuestPublicPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE SNSRole AWS::IAM::Role Thu Jan 14 2021 10:09:38 GMT+0100 (Midden-Europese standaardtijd) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE DataStore AWS::DynamoDB::Table Thu Jan 14 2021 10:09:36 GMT+0100 (Midden-Europese standaardtijd) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS SyncPostResolver   AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UpdatePostResolver AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS GetPostResolver    AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS DeletePostResolver AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS CreatePostResolver AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS ListPostResolver   AWS::AppSync::Resolver   Thu Jan 14 2021 10:09:40 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    PostDataSource     AWS::AppSync::DataSource Thu Jan 14 2021 10:09:38 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS PostDataSource     AWS::AppSync::DataSource Thu Jan 14 2021 10:09:38 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS PostDataSource     AWS::AppSync::DataSource Thu Jan 14 2021 10:09:36 GMT+0100 (Midden-Europese standaardtijd)                            
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    UserPool AWS::Cognito::UserPool Thu Jan 14 2021 10:09:43 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UserPool AWS::Cognito::UserPool Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UserPool AWS::Cognito::UserPool Thu Jan 14 2021 10:09:41 GMT+0100 (Midden-Europese standaardtijd)                            
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    ListPostResolver   AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    UpdatePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS ListPostResolver   AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_COMPLETE    DeletePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    SyncPostResolver   AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UpdatePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS DeletePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_COMPLETE    CreatePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS SyncPostResolver   AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_COMPLETE    GetPostResolver    AWS::AppSync::Resolver Thu Jan 14 2021 10:09:42 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS CreatePostResolver AWS::AppSync::Resolver Thu Jan 14 2021 10:09:41 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS GetPostResolver    AWS::AppSync::Resolver Thu Jan 14 2021 10:09:41 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientRole AWS::IAM::Role               Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    UserPoolClientWeb  AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:47 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    UserPoolClient     AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:47 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UserPoolClientWeb  AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:47 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UserPoolClient     AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:47 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UserPoolClientWeb  AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:46 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UserPoolClient     AWS::Cognito::UserPoolClient Thu Jan 14 2021 10:09:46 GMT+0100 (Midden-Europese standaardtijd)                            
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE S3GuestUploadPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:51 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3AuthPublicPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:09:51 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3AuthProtectedPolicy AWS::IAM::Policy Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3GuestPublicPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3GuestReadPolicy     AWS::IAM::Policy Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3AuthPrivatePolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM-Post-11P96ANNTLT1S AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:50 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE PostTable                                                                          AWS::DynamoDB::Table       Thu Jan 14 2021 10:09:47 GMT+0100 (Midden-Europese standaardtijd) 
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientRole AWS::IAM::Role Thu Jan 14 2021 10:09:51 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE S3AuthUploadPolicy AWS::IAM::Policy Thu Jan 14 2021 10:09:51 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE S3AuthReadPolicy   AWS::IAM::Policy Thu Jan 14 2021 10:09:51 GMT+0100 (Midden-Europese standaardtijd) 
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-awsphotoalbum-dev-100147-storages37adf121c-4NRY03H15G4N AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:53 GMT+0100 (Midden-Europese standaardtijd) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE storages37adf121c AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:55 GMT+0100 (Midden-Europese standaardtijd) 
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS CustomResourcesjson AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:00 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS CustomResourcesjson AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:59 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    Post                AWS::CloudFormation::Stack Thu Jan 14 2021 10:09:57 GMT+0100 (Midden-Europese standaardtijd)                            
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM-CustomResourcesjson-1PNRVK3G1CWII AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:00 GMT+0100 (Midden-Europese standaardtijd) User Initiated
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolClientRole AWS::IAM::Role Thu Jan 14 2021 10:10:08 GMT+0100 (Midden-Europese standaardtijd) 
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM-CustomResourcesjson-1PNRVK3G1CWII AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:08 GMT+0100 (Midden-Europese standaardtijd) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    UserPoolClientLambda AWS::Lambda::Function Thu Jan 14 2021 10:10:12 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UserPoolClientLambda AWS::Lambda::Function Thu Jan 14 2021 10:10:12 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UserPoolClientLambda AWS::Lambda::Function Thu Jan 14 2021 10:10:11 GMT+0100 (Midden-Europese standaardtijd)                            
+
+
+CREATE_COMPLETE amplify-awsphotoalbum-dev-100147-apiawsphotoalbum-1NO1AHCBDRBTM AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:13 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE CustomResourcesjson                                             AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:11 GMT+0100 (Midden-Europese standaardtijd) 
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLambdaPolicy AWS::IAM::Policy Thu Jan 14 2021 10:10:16 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UserPoolClientLambdaPolicy AWS::IAM::Policy Thu Jan 14 2021 10:10:15 GMT+0100 (Midden-Europese standaardtijd)                            
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE apiawsphotoalbum AWS::CloudFormation::Stack Thu Jan 14 2021 10:10:29 GMT+0100 (Midden-Europese standaardtijd) 
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLogPolicy    AWS::IAM::Policy Thu Jan 14 2021 10:10:34 GMT+0100 (Midden-Europese standaardtijd) 
+CREATE_COMPLETE    UserPoolClientLambdaPolicy AWS::IAM::Policy Thu Jan 14 2021 10:10:31 GMT+0100 (Midden-Europese standaardtijd) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLogPolicy AWS::IAM::Policy Thu Jan 14 2021 10:10:35 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolClientLogPolicy AWS::IAM::Policy Thu Jan 14 2021 10:10:50 GMT+0100 (Midden-Europese standaardtijd) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientInputs Custom::LambdaCallout Thu Jan 14 2021 10:10:53 GMT+0100 (Midden-Europese standaardtijd) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS IdentityPool         AWS::Cognito::IdentityPool Thu Jan 14 2021 10:11:00 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    UserPoolClientInputs Custom::LambdaCallout      Thu Jan 14 2021 10:10:57 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UserPoolClientInputs Custom::LambdaCallout      Thu Jan 14 2021 10:10:56 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    IdentityPool AWS::Cognito::IdentityPool Thu Jan 14 2021 10:11:02 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS IdentityPool AWS::Cognito::IdentityPool Thu Jan 14 2021 10:11:01 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    amplify-awsphotoalbum-dev-100147-authawsphotoalbum7d7bce11-91YMMAYNPQB9 AWS::CloudFormation::Stack               Thu Jan 14 2021 10:11:09 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    IdentityPoolRoleMap                                                     AWS::Cognito::IdentityPoolRoleAttachment Thu Jan 14 2021 10:11:07 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS IdentityPoolRoleMap                                                     AWS::Cognito::IdentityPoolRoleAttachment Thu Jan 14 2021 10:11:07 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS IdentityPoolRoleMap                                                     AWS::Cognito::IdentityPoolRoleAttachment Thu Jan 14 2021 10:11:06 GMT+0100 (Midden-Europese standaardtijd)                            
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE authawsphotoalbum7d7bce11 AWS::CloudFormation::Stack Thu Jan 14 2021 10:11:29 GMT+0100 (Midden-Europese standaardtijd) 
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout Thu Jan 14 2021 10:11:33 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE    UpdateRolesWithIDPFunction        AWS::Lambda::Function Thu Jan 14 2021 10:11:32 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunction        AWS::Lambda::Function Thu Jan 14 2021 10:11:31 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunction        AWS::Lambda::Function Thu Jan 14 2021 10:11:31 GMT+0100 (Midden-Europese standaardtijd)                            
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_COMPLETE                     amplify-awsphotoalbum-dev-100147  AWS::CloudFormation::Stack Thu Jan 14 2021 10:11:39 GMT+0100 (Midden-Europese standaardtijd)                            
+UPDATE_COMPLETE_CLEANUP_IN_PROGRESS amplify-awsphotoalbum-dev-100147  AWS::CloudFormation::Stack Thu Jan 14 2021 10:11:39 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_COMPLETE                     UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout      Thu Jan 14 2021 10:11:37 GMT+0100 (Midden-Europese standaardtijd)                            
+CREATE_IN_PROGRESS                  UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout      Thu Jan 14 2021 10:11:36 GMT+0100 (Midden-Europese standaardtijd) Resource creation Initiated
+✔ Generated GraphQL operations successfully and saved at graphql
+✔ Code generated successfully and saved in file API.swift
+✔ All resources are updated in the cloud
+
+GraphQL endpoint: https://4n3mepxs25ewlkzfwpguifr32u.appsync-api.eu-central-1.amazonaws.com/graphql
+GraphQL API KEY: da2-hrkz7y27x5fotdwpuzjojfssam
+
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % ls
+API.swift			AWSPhotoAlbum.xcodeproj		amplifyconfiguration.json	graphql
+AWSPhotoAlbum			amplify				awsconfiguration.json
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % pod init
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % pod install --repo-update
+Updating local specs repositories
+Analyzing dependencies
+Downloading dependencies
+Installing AWSAuthCore (2.22.0)
+Installing AWSCognitoIdentityProvider (2.22.0)
+Installing AWSCognitoIdentityProviderASF (2.22.0)
+Installing AWSCore (2.22.0)
+Installing AWSMobileClient (2.22.0)
+Installing AWSPluginsCore (1.5.3)
+Installing AWSS3 (2.22.0)
+Installing Amplify (1.5.3)
+Installing AmplifyPlugins (1.5.3)
+Installing AppSyncRealTimeClient (1.4.2)
+Installing SQLite.swift (0.12.2)
+Installing Starscream (3.1.1)
+Generating Pods project
+Integrating client project
+
+[!] Please close any current Xcode sessions and use `AWSPhotoAlbum.xcworkspace` for this project from now on.
+Pod installation complete! There are 5 dependencies from the Podfile and 12 total pods installed.
+
+[!] Amplify has added 1 script phase. Please inspect before executing a build. See `https://guides.cocoapods.org/syntax/podspec.html#script_phases` for more information.
+
+[!] Your project does not explicitly specify the CocoaPods master specs repo. Since CDN is now used as the default, you may safely remove it from your repos directory via `pod repo remove master`. To suppress this warning please add `warn_for_unused_master_specs_repo => false` to your Podfile.
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % xed .
+rickgijsberts@MacBook-Pro-van-Rick AWSPhotoAlbum % 
